@@ -1,4 +1,4 @@
-# 22200849, 22207839
+# [Author: Maxim Lapitan]
 
 # Import necessary libraries
 import numpy as np
@@ -16,16 +16,19 @@ class Perceptron:
         # Set the activation function for the perceptron
         self.activation = activation
 
+
     def out(self, xs):
         # Calculate the weighted sum and apply the activation function
         S = self.weights[1:].dot(xs) + self.weights[0]
         o = self.activation(S)
         return o
 
+
     def out_weights(self, xs, weights):
         S = weights[1:].dot(xs) + weights[0] 
         o = self.activation(S)
         return o
+
 
     def train(self, trainset):
         # Training parameters
@@ -55,6 +58,7 @@ class Perceptron:
             maxiter = maxiter - 1
         return self.weights
 
+
     def test(self, testset):
         print("Testing...")
         Rs = []
@@ -66,7 +70,8 @@ class Perceptron:
             Rs.append(R)
             print(f"Input: {I}, Target: {T}, Output: {R}")
         return Rs
-    
+
+
     def test_weights(self, testset, weights):
         print("Testing...")
         Rs = []
@@ -74,10 +79,11 @@ class Perceptron:
         for i in range(len(testset)):
             I = testset[i][0]
             T = testset[i][1]
-            R = self.out_weitghts(I, weights)
+            R = self.out_weights(I, weights)
             Rs.append(R)
             print(f"Input: {I}, Target: {T}, Output: {R}")
         return Rs
+
 
 # Define a threshold activation function
 def threshold(y):

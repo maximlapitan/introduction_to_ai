@@ -1,4 +1,4 @@
-# 22200849, 22207839
+# [Author: Maxim Lapitan]
 
 # Import necessary libraries and functions from other files
 import numpy as np

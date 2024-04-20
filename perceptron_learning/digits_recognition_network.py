@@ -1,4 +1,4 @@
-# 22200849, 22207839
+# [Author: Maxim Lapitan]
 # this file only provides a class
 # Import class and function from Perceptron
 from perceptron import Perceptron, threshold

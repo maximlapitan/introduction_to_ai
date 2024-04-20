@@ -1,4 +1,4 @@
-# 22200849, 22207839
+# [Author: Maxim Lapitan]
 
 # Import classes and functions from other files
 from perceptron_gradient import GradientPerceptron
